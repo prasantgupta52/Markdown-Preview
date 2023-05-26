@@ -289,6 +289,8 @@ blockquote {
   .Markdown-Header {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .Markdown-Navbar {
