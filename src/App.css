@@ -37,17 +37,13 @@
   }
 }
 
-div {
+/* to be included from here*/
+.Markdown-Box {
+  display: flex;
   background-color: black;
 }
 
-/* to be included from here*/
-
-.Markdown-Box {
-  display: flex;
-}
-
-.mardown-input-box {
+.Markdown-Input-Box {
   background-color: rgb(32, 32, 32);
   color: white;
   height: 100vh;
@@ -56,6 +52,7 @@ div {
   padding: 2% 2%;
   border: 0px;
   resize: horizontal;
+  outline: none;
 }
 
 .Markdown-Preview {
@@ -180,11 +177,11 @@ blockquote {
 }
 
 .Markdown-Navbar {
-  height: 10vh;
   display: flex;
   color: white;
   align-items: center;
   border-bottom: 1px solid white;
+  background-color: black;
 }
 
 .Markdown-Header {
@@ -216,5 +213,125 @@ blockquote {
   font-weight: bold;
   padding: 0.5em;
   border-radius: 10px;
+  /* margin: 0.5em; */
 }
 
+.Desktop-Hide {
+  display: none; 
+}
+
+@media screen and (max-width: 1080px) {
+
+  .Markdown-Input-Box {
+    font-size: large;
+  }
+
+  .Markdown-Preview {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .Desktop-Hide {
+    display: block; 
+  }
+
+  .Markdown-Box {
+    display: block;
+    height: 110vh;
+  }
+  
+  .Markdown-Input-Box {
+    width: 90%;
+  }
+  
+  .Markdown-Preview {
+    width: 90%;
+  }
+
+  .Mobile-Hide {
+    display: none;
+  }
+
+  .Markdown-Sub-Navbar {
+    background-color: black;
+    display: flex;
+  }
+
+  .Markdown-Sub-Navbar div {
+    font-weight: bold;
+    background-color: #9A77FC;
+    width: fit-content;
+    padding: 0.5em;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .Markdown-Operators {
+    margin-right: 0.5em;
+  }
+  
+  .Preview-Button {
+    margin: 0.5em;
+    margin-left: auto;
+    margin-right: 1.5em;
+  }
+
+  .Edit-Button {
+    margin: 0.5em;
+    margin-left: 1.5em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .Markdown-Header {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  
+  .Markdown-Navbar {
+    display: block;
+    border: 0px;
+  }
+  
+  .Markdown-Operators {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-left: 0.5em;
+    justify-content: space-between;
+  }
+  
+  .Markdown-Operators div {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .Markdown-Box {
+    height: 110vh;
+  }
+}
+
+@media screen and (max-width: 600px) { 
+  .Markdown-Operators div {
+    font-size: small;
+  }
+
+  .Markdown-Sub-Navbar div {
+    font-size: small;
+  }
+
+  .Markdown-Input-Box {
+    font-size: medium;
+  }
+
+  .Markdown-Preview table {
+    font-size: 1rem;
+  }
+  
+  .Markdown-Preview {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}

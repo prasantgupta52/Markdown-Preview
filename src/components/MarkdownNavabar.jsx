@@ -52,6 +52,7 @@ const MarkdownNavabar = (props) => {
   }
 
   return (
+    <>
     <div className='Markdown-Navbar'>
       <div className="Markdown-Header">Markdown-Preview</div>
       <div className="Markdown-Operators">
@@ -61,6 +62,11 @@ const MarkdownNavabar = (props) => {
         <div className="Markdown-Clear" onClick={Clear}>{clear?(<>Cleared &#x2713;</>):(<>Clear</>)}</div>
       </div>
     </div>
+    <div className="Markdown-Sub-Navbar Desktop-Hide">
+      <div className="Edit-Button" onClick={props.handleEditClick}>Edit</div>
+      <div className="Preview-Button" onClick={props.handlePreviewClick}>Preview</div>
+    </div>
+    </>
   )
 }
 
