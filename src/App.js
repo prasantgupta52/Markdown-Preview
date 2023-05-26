@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React , { useState } from 'react'
+import MarkdownInput from './components/MarkdownInput';
+import MarkdownPreview from './components/MarkdownPreview';
+import MarkdownNavabar from './components/MarkdownNavabar';
 
 function App() {
+
+  var keyExists = localStorage.getItem('markdown') !== null;
+  var localmarkdown;
+  if (keyExists) {
+    localmarkdown = localStorage.getItem('markdown');
+  } else {
+    localmarkdown = "";
+  }
+
+  const [markdown, setMarkdown] = useState(localmarkdown);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MarkdownNavabar markdown={markdown} setMarkdown={setMarkdown} />
+      <div className="Markdown-Box">
+        <MarkdownInput markdown={markdown} setMarkdown={setMarkdown} />
+        <MarkdownPreview markdown={markdown} setMarkdown={setMarkdown} />
+      </div>
     </div>
   );
 }
