@@ -56,10 +56,10 @@ const MarkdownNavabar = (props) => {
     <div className='Markdown-Navbar'>
       <div className="Markdown-Header">Markdown-Preview</div>
       <div className="Markdown-Operators">
-        <div className="Markdown-Copy" onClick={Copy}>{copy?(<>Copied &#x2713;</>):(<>Copy &nbsp; <i class="fa fa-copy"></i></>)}</div>
-        <div className="Markdown-Revert" onClick={Revert}>{revert?(<>Reverted &#x2713;</>):(<>Revert &nbsp; <i class="fa fa-undo"></i></>)}</div>
-        <div className="Markdown-Commit" onClick={Commit}>{commit?(<>Commited &#x2713;</>):(<>Commit &nbsp; <i class="fa fa-save"></i></>)}</div>
-        <div className="Markdown-Clear" onClick={Clear}>{clear?(<>Cleared &#x2713;</>):(<>Clear &nbsp; <i class="fa fa-minus-square"></i></>)}</div>
+        <div className="Markdown-Copy" onClick={Copy}>{copy?(<>Copied &nbsp; <i class="fa fa-check"></i></>):(<>Copy &nbsp; <i class="fa fa-copy"></i></>)}</div>
+        <div className="Markdown-Revert" onClick={Revert}>{revert?(<>Reverted &nbsp; <i class="fa fa-check"></i></>):(<>Revert &nbsp; <i class="fa fa-undo"></i></>)}</div>
+        <div className="Markdown-Commit" onClick={Commit}>{commit?(<>Commited &nbsp; <i class="fa fa-check"></i></>):(<>Commit &nbsp; <i class="fa fa-save"></i></>)}</div>
+        <div className="Markdown-Clear" onClick={Clear}>{clear?(<>Cleared &nbsp; <i class="fa fa-check"></i></>):(<>Clear &nbsp; <i class="fa fa-minus-square"></i></>)}</div>
       </div>
     </div>
     <div className="Markdown-Sub-Navbar Desktop-Hide">

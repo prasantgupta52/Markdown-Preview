@@ -231,7 +231,7 @@ blockquote {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
 
   .Desktop-Hide {
     display: block; 
@@ -284,7 +284,7 @@ blockquote {
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 800px) {
 
   .Markdown-Header {
     padding-top: 0.5em;
@@ -315,6 +315,7 @@ blockquote {
 
 @media screen and (max-width: 600px) { 
   .Markdown-Operators div {
+    line-height: 20px;
     font-size: small;
   }
 
